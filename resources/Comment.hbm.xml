@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.miguelmarzo.backend.MiguelMarzo.models">
+
+	<class name="Comment" table="comments">
+		<id name="id" column="idComment">
+			<generator class="identity" />
+		</id>
+		<property name="content" />
+		<property name="commentDate" />
+		<many-to-one name="post" column="idPost" />
+	</class>
+
+</hibernate-mapping>
